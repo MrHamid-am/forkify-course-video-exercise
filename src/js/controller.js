@@ -143,6 +143,10 @@ const controlSortResults = function (isSorted) {
     } else resultsView.update(model.getSearchResultsPage());
 };
 
+const newFeature = function () {
+    console.log("Welcome to the application");
+};
+
 const init = function () {
     bookmarksView.addHandlerRender(controlBookmarks);
     recipeView.addHandlerRender(controlRecipes);
@@ -152,7 +156,7 @@ const init = function () {
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerPagainationClick(controlPagination);
     addRecipeView.addHandlerUpload(controlAddRecipe);
-    console.log("Welcome!");
+    newFeature();
 
     // Upload new recipe data
 };
