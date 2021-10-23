@@ -58,6 +58,7 @@ export const loadSearchResult = async function (query) {
             `${API_URL}?search=${query}&key=${DEVELOPER_KEY}`
         );
         console.log(data);
+        console.log(state);
 
         state.search.results = data.data.recipes.map((recipe) => {
             return {
@@ -68,7 +69,7 @@ export const loadSearchResult = async function (query) {
                 ...(recipe.key && { key: recipe.key }),
             };
         });
-        console.log(state.search.results);
+        console.log(state);
         this.state.search.page = 1;
     } catch (error) {
         throw error;
