@@ -50,7 +50,6 @@ const controlSearchResults = async function () {
 
         // 2) Load results
         await model.loadSearchResult(query);
-        console.log(model);
 
         // 3) Render results
         const result = model.getSearchResultsPage(); // Passing nothing is same as passing "1"
